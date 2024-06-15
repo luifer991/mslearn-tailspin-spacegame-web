@@ -1,3 +1,7 @@
 pool: MyAgentPool
 steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    feedsToUse: 'select'
 - bash: echo hello world
